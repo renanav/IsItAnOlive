@@ -15,12 +15,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var capturedImage: UIImageView!
     
     let imagePicker = UIImagePickerController()
+    let imageQuery = "cat"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.allowsEditing = false
         
     }
     
@@ -41,20 +40,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func detect(image: CIImage) {
         guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
-                fatalError("Loading CoreML model failed.")
+            fatalError("Loading CoreML model failed.")
         }
         
         let request = VNCoreMLRequest(model: model) { (request, error) in
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Model failed to process image")
             }
-
+            
+            print(results)
+            
             // Change the navbar title based on the image recognition
             if let firstResult = results.first {
-                if firstResult.identifier.contains("Olive") {
-                    self.navigationItem.title = "Olive"
+                if firstResult.identifier.contains(self.imageQuery) {
+                    self.navigationItem.title = self.imageQuery
                 } else {
-                    self.navigationItem.title = "Not an olive"
+                    self.navigationItem.title = "Not \(self.imageQuery)"
                 }
             }
             
@@ -72,9 +73,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
+        imagePicker.sourceType = .camera
+        imagePicker.allowsEditing = false
+        imagePicker.cameraCaptureMode = .photo
+        imagePicker.modalPresentationStyle = .fullScreen
         present(imagePicker, animated: true, completion: nil)
+        
     }
     
+    @IBAction func plusTapped(_ sender: UIBarButtonItem) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        imagePicker.modalPresentationStyle = .popover
+        present(imagePicker, animated: true, completion: nil)
+        imagePicker.popoverPresentationController?.barButtonItem = sender
+    }
     
 }
 

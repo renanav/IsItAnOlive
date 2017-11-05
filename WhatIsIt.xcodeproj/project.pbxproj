@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE1FA5C81FAFB8FD00708B90 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE1FA5C71FAFB8FD00708B90 /* Default-568h@2x.png */; };
+		DE1FA5C91FAFB97400708B90 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE386A381FAE9BB3001EE365 /* Info.plist */; };
 		DE386A2D1FAE9BB3001EE365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE386A2C1FAE9BB3001EE365 /* AppDelegate.swift */; };
 		DE386A2F1FAE9BB3001EE365 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE386A2E1FAE9BB3001EE365 /* ViewController.swift */; };
 		DE386A321FAE9BB3001EE365 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE386A301FAE9BB3001EE365 /* Main.storyboard */; };
@@ -16,7 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DE386A291FAE9BB3001EE365 /* IsItAnOlive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IsItAnOlive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE1FA5C71FAFB8FD00708B90 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DE386A291FAE9BB3001EE365 /* WhatIsIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatIsIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE386A2C1FAE9BB3001EE365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE386A2E1FAE9BB3001EE365 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE386A311FAE9BB3001EE365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,7 +43,8 @@
 		DE386A201FAE9BB3001EE365 = {
 			isa = PBXGroup;
 			children = (
-				DE386A2B1FAE9BB3001EE365 /* IsItAnOlive */,
+				DE1FA5C71FAFB8FD00708B90 /* Default-568h@2x.png */,
+				DE386A2B1FAE9BB3001EE365 /* WhatIsIt */,
 				DE386A2A1FAE9BB3001EE365 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +52,12 @@
 		DE386A2A1FAE9BB3001EE365 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE386A291FAE9BB3001EE365 /* IsItAnOlive.app */,
+				DE386A291FAE9BB3001EE365 /* WhatIsIt.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DE386A2B1FAE9BB3001EE365 /* IsItAnOlive */ = {
+		DE386A2B1FAE9BB3001EE365 /* WhatIsIt */ = {
 			isa = PBXGroup;
 			children = (
 				DE386A2C1FAE9BB3001EE365 /* AppDelegate.swift */,
@@ -64,15 +68,15 @@
 				DE386A381FAE9BB3001EE365 /* Info.plist */,
 				DE386A3E1FAE9CA7001EE365 /* Inceptionv3.mlmodel */,
 			);
-			path = IsItAnOlive;
+			path = WhatIsIt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DE386A281FAE9BB3001EE365 /* IsItAnOlive */ = {
+		DE386A281FAE9BB3001EE365 /* WhatIsIt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE386A3B1FAE9BB3001EE365 /* Build configuration list for PBXNativeTarget "IsItAnOlive" */;
+			buildConfigurationList = DE386A3B1FAE9BB3001EE365 /* Build configuration list for PBXNativeTarget "WhatIsIt" */;
 			buildPhases = (
 				DE386A251FAE9BB3001EE365 /* Sources */,
 				DE386A261FAE9BB3001EE365 /* Frameworks */,
@@ -82,9 +86,9 @@
 			);
 			dependencies = (
 			);
-			name = IsItAnOlive;
+			name = WhatIsIt;
 			productName = IsItAnOlive;
-			productReference = DE386A291FAE9BB3001EE365 /* IsItAnOlive.app */;
+			productReference = DE386A291FAE9BB3001EE365 /* WhatIsIt.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +107,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DE386A241FAE9BB3001EE365 /* Build configuration list for PBXProject "IsItAnOlive" */;
+			buildConfigurationList = DE386A241FAE9BB3001EE365 /* Build configuration list for PBXProject "WhatIsIt" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,7 +120,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DE386A281FAE9BB3001EE365 /* IsItAnOlive */,
+				DE386A281FAE9BB3001EE365 /* WhatIsIt */,
 			);
 		};
 /* End PBXProject section */
@@ -127,7 +131,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE386A371FAE9BB3001EE365 /* LaunchScreen.storyboard in Resources */,
+				DE1FA5C81FAFB8FD00708B90 /* Default-568h@2x.png in Resources */,
 				DE386A341FAE9BB3001EE365 /* Assets.xcassets in Resources */,
+				DE1FA5C91FAFB97400708B90 /* Info.plist in Resources */,
 				DE386A321FAE9BB3001EE365 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,9 +286,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D83GZGE358;
-				INFOPLIST_FILE = IsItAnOlive/Info.plist;
+				INFOPLIST_FILE = WhatIsIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.RenanAvrahami.IsItAnOlive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RenanAvrahami.WhatIsIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -295,9 +301,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D83GZGE358;
-				INFOPLIST_FILE = IsItAnOlive/Info.plist;
+				INFOPLIST_FILE = WhatIsIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.RenanAvrahami.IsItAnOlive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RenanAvrahami.WhatIsIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,7 +313,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DE386A241FAE9BB3001EE365 /* Build configuration list for PBXProject "IsItAnOlive" */ = {
+		DE386A241FAE9BB3001EE365 /* Build configuration list for PBXProject "WhatIsIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE386A391FAE9BB3001EE365 /* Debug */,
@@ -316,7 +322,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE386A3B1FAE9BB3001EE365 /* Build configuration list for PBXNativeTarget "IsItAnOlive" */ = {
+		DE386A3B1FAE9BB3001EE365 /* Build configuration list for PBXNativeTarget "WhatIsIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE386A3C1FAE9BB3001EE365 /* Debug */,

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  IsItAnOlive
+//  WhatIsIt
 //
 //  Created by Renan Avrahami on 11/4/17.
 //  Copyright © 2017 Renan Avrahami. All rights reserved.

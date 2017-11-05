@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  IsItAnOlive
+//  WhatIsIt
 //
 //  Created by Renan Avrahami on 11/4/17.
 //  Copyright © 2017 Renan Avrahami. All rights reserved.
@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var capturedImage: UIImageView!
     
     let imagePicker = UIImagePickerController()
+    // Here it is possible to change what we want to recognize. i.e hot dog, skies, flower...
     let imageQuery = "cat"
     
     override func viewDidLoad() {
@@ -82,8 +83,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func plusTapped(_ sender: UIBarButtonItem) {
-        imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = false
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         imagePicker.modalPresentationStyle = .popover
         present(imagePicker, animated: true, completion: nil)

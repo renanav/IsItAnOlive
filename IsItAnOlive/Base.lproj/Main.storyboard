@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,11 +33,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="dY7-cb-2S8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="8IK-wy-kbN">
-                            <connections>
-                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="zaV-cX-9r2"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="8IK-wy-kbN">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="BYZ-38-t0r" id="zaV-cX-9r2"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" id="QGM-PI-Nul">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="BYZ-38-t0r" id="XhG-pu-lQL"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="capturedImage" destination="CJN-UL-LkI" id="gf8-79-5tQ"/>

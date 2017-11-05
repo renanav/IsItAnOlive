@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        imagePicker.sourceType = .camera
+        imagePicker.sourceType = .photoLibrary
         imagePicker.allowsEditing = false
         
     }
@@ -48,7 +48,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Model failed to process image")
             }
-            print(results)
+
+            // Change the navbar title based on the image recognition
+            if let firstResult = results.first {
+                if firstResult.identifier.contains("Olive") {
+                    self.navigationItem.title = "Olive"
+                } else {
+                    self.navigationItem.title = "Not an olive"
+                }
+            }
+            
         }
         
         let handler = VNImageRequestHandler(ciImage: image)

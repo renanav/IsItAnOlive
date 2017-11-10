@@ -21,8 +21,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        
+        imagePicker.dismiss(animated: true, completion: nil)
+
     }
+    
+ 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let userPickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -57,6 +60,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.navigationItem.title = self.imageQuery
                 } else {
                     self.navigationItem.title = "Not \(self.imageQuery)"
+                    
                 }
             }
             
